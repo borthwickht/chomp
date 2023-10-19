@@ -2,6 +2,9 @@ import pygame
 import sys
 import random
 
+from fish import Fish, fishes #importing a class and sprite group
+
+
 #Initialize pygame
 pygame.init()
 
@@ -45,34 +48,13 @@ def draw_background(screen):
     text = custom_font.render('Chomp', True, (255,0,0))
     screen.blit(text, (screen_width/2 - text.get_width()/2,screen_height/17 - text.get_height()/2))
 
-#load some fish tiles
-
-def draw_fishes(screen):
-    green_fish = pygame.image.load('assets/sprites/green_fish.png').convert()
-    green_fish.set_colorkey((0,0,0)) #set png transparency
-
-    for _ in range(5):
-        x = random.randint(0,screen_width-tile_size)
-        y = random.randint(0,screen_height-tile_size-tile_size)
-        screen.blit(green_fish, (x,y))
-
-def draw_fishes_puffer(screen):
-    puffer_fish = pygame.image.load('assets/sprites/puffer_fish.png').convert()
-    puffer_fish = pygame.transform.flip(puffer_fish, True, False)
-    puffer_fish.set_colorkey((0,0,0)) #set png transparency
-
-    for _ in range(5):
-        x = random.randint(0,screen_width-tile_size)
-        y = random.randint(0,screen_height-tile_size-tile_size)
-        screen.blit(puffer_fish, (x,y))
-
-
 #main loop
 running = True
 background = screen.copy()
 draw_background(background)
-draw_fishes(background)
-draw_fishes_puffer(background)
+#draw fish on screen
+for _ in range(5):
+    fishes.add(Fish(random.randint(0,screen_width-tile_size),random.randint(0,screen_height-tile_size-tile_size)))
 
 while running:
     for event in pygame.event.get():
@@ -81,10 +63,13 @@ while running:
     #draw background
     screen.blit(background, (0,0))
 
-
+    #draw sprite group fishes
+    fishes.draw(background)
 
     #update display
     pygame.display.flip()
 
 #quit pygame
 pygame.quit()
+
+
