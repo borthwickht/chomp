@@ -29,9 +29,17 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/m260612/Desktop/EW200/Labs/GetHub/chomp&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/m260612/Desktop/EW200/Labs/GetHub/chomp/game4&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\m260612\Desktop\EW200\Labs\GetHub\chomp\game4" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\m260612\Desktop\EW200\Labs\GetHub\chomp\game4" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="chomp" />
