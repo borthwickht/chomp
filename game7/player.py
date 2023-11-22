@@ -1,9 +1,8 @@
 import pygame
 from game_parameters import *
-#from event import *
+# from event import *
 
 # create a pygame sprite class for a player
-
 class Player(pygame.sprite.Sprite):
     def __init__(self, x, y):
         super().__init__()
